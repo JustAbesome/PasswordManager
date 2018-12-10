@@ -1,0 +1,67 @@
+.hidden{
+	display: none;
+}
+
+.container{
+	margin-top: 20px;
+}
+
+.navbar-brand{
+	margin-right: 20px;
+}
+
+a {
+	color: #212529;
+}
+
+a:hover{
+	color: #212529;
+	text-decoration: none;
+}
+
+.oi-trash {
+	float: right;
+}
+
+.email {
+	color: #777;
+}
+
+.seperator {
+	color: #888;
+	/*margin: 0 5px 0 10px;*/
+	margin-left: 10px;
+}
+
+.back {
+	float: right;
+}
+
+.add-submit {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.loading-gif {
+	margin: 20px auto;
+	width: 200px;
+	height: auto;
+}
+
+#home {
+	min-width: 200px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#add {
+	min-width: 200px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.oi-trash {
+	cursor: pointer;
+}

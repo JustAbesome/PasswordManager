@@ -1,0 +1,33 @@
+	<%- include('../partials/header', { title: title, name: name }) %>
+	<% if(typeof negativeAlert !== 'undefined') { %>
+	<div class="alert alert-danger" role="alert">
+	  <%= negativeAlert %>
+	</div>
+	<% } %>
+	<% if(typeof positiveAlert !== 'undefined') { %>
+	<div class="alert alert-success" role="alert">
+	  <%= positiveAlert %>
+	</div>
+	<% } %>
+	<h1>Home</h1>
+	<ul class="list-group"></ul>
+	<% passwords.forEach((password) => { %>
+		<li class="list-group-item">
+			<a href="/password/<%=password['_id']%>">
+				<span class="site-name"><%=password['site']%></span>
+				<span class="seperator">|</span>
+				<span class="small email"> <%=password['email']%></span>
+			</a>
+			<span onclick="submit(this)" class="oi oi-trash" title="plus" aria-hidden="trash"></span>
+			<form action="/api?_method=DELETE" method="POST">
+				<input type="hidden" name="id" value="<%=password['_id']%>">	
+			</form>
+		</li>
+	<% }); %>
+	</ul>
+	<script type="text/javascript">
+		function submit(element){
+			element.nextElementSibling.submit();
+		}
+	</script>
+	<%- include('../partials/footer') %>

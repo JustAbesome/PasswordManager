@@ -1,0 +1,31 @@
+  <%- include('../partials/header', { title: title, name: name }) %>
+  <% if(typeof negativeAlert != 'undefined') { %>
+  <div class="alert alert-danger" role="alert">
+    <%= negativeAlert %>
+  </div>
+  <% } %>
+  <% if(typeof positiveAlert != 'undefined') { %>
+  <div class="alert alert-succes" role="alert">
+    <%= positiveAlert %>
+  </div>
+  <% } %>
+
+  <h1>Add password</h1>
+  <form action="/api" method="POST">
+    <div class="form-group">
+      <label>Site's Name</label>
+      <input type="text" class="form-control" placeholder="Site name" name="site">
+    </div>
+    <div class="form-group">
+      <label>Email address or user name</label>
+      <input type="text" class="form-control" placeholder="Enter email or user name" name="email">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" placeholder="Password" name="password">
+    </div>
+
+    <button type="submit" class="btn btn-dark add-submit">Add</button>
+  </form>
+
+  <%- include('../partials/footer') %>
