@@ -26,7 +26,7 @@ export class Home extends React.Component{
 	}
 
 	render(){
-		const { passwords } = this.state;
+		const passwords = this.state.passwords;
 		return(
 			<div id="home" className="container">
 				<h1>Home</h1>
