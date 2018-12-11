@@ -18,7 +18,6 @@ export class Home extends React.Component{
 		fetch('/api')
 			.then(res => res.json())
 			.then(passwords => this.setState({ passwords }));
-		console.log('update!');
 	}
 
 	componentDidMount(){
