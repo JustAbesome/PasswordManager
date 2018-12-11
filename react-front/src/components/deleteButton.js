@@ -9,7 +9,6 @@ export class DeleteButton extends React.Component{
 	deleteCall(e) {
 		let id = this.props.id;
 		let update = this.props.updater;
-		update();
 		let url = '/api/' + id;
 		fetch(url, {
 			method: 'delete'
