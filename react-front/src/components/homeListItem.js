@@ -7,7 +7,7 @@ export class HomeListItem extends React.Component {
 		let password = this.props.password;
 		let updater = this.props.updater;
 		return(
-			<li key={password._id} className="list-group-item">
+			<li className="list-group-item">
 				<Link to={'/password/' + password._id }>
 					<span className="site-name">{password.site}</span>
 					<span className="seperator">|</span>
